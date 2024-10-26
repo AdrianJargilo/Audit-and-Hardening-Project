@@ -107,3 +107,9 @@ The first step in the project was to determine the system's attack surface by an
      ```
 
 
+# 🚧 Under Construction! 🚧
+
+Hey there! 👋 This project is currently a work in progress. 🛠️ Feel free to look around, but keep in mind that things are still evolving and might change a bit. Check back later to see the polished version in all its glory!
+
+Thanks for your patience! 😊
+
