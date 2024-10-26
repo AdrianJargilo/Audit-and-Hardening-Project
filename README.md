@@ -12,8 +12,9 @@ This repository contains the project for auditing and hardening a Linux system u
 - [Contributing](#contributing)
 - [License](#license)
 
-## Environment Setup
-The environment for these vulnerability scans included the following:
-- **Virtual Machine**: [Metasploitable](https://sourceforge.net/projects/metasploitable/) - an intentionally vulnerable Linux virtual machine used for testing purposes.
-- **Virtualization Software**: VirtualBox was used to run the Metasploitable VM.
-- **Network Configuration**: Both VMs (Kali Linux and Metasploitable) were configured in NAT mode, allowing them to communicate with each other.
+## Introduction
+In this project, I performed vulnerability audits on a Kali Linux system using the following tools:
+- **Lynis**: An open-source auditing tool for Unix-based systems.
+- **CIS Benchmark**: A framework for system hardening developed by the Center for Internet Security (CIS).
+
+The audit was conducted in several stages, including an initial audit using Lynis, implementing the recommended changes, and verifying improvements using a second audit. Additionally, the CIS recommendations were applied to further harden the system.
