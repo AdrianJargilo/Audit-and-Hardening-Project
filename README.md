@@ -56,6 +56,8 @@ The first step in the project was to determine the system's attack surface by an
      ```bash
      sudo netstat -ntlup
      ```
+     ![image](https://github.com/user-attachments/assets/37f471fa-e05a-4ada-ab05-68477f2539c1)
+
      This command lists all the active connections, listening ports, and the processes associated with them.
    - Verified the results with `nmap` to cross-check the open ports:
      ```bash
@@ -90,3 +92,18 @@ The first step in the project was to determine the system's attack surface by an
    Installed `unattended-upgrades` to enable automatic security updates for the system:
    ```bash
    sudo apt-get install unattended-upgrades
+   
+5. **Root Login Configuration**: Disabled root login via SSH to prevent unauthorized access.
+   - Edited the `/etc/ssh/sshd_config` file and set:
+     ```bash
+     PermitRootLogin no
+     ```
+
+6. **Kernel Configuration**: Reviewed kernel settings using `sysctl` and adjusted critical parameters in `/etc/sysctl.conf` to improve system security, including:
+   - Disabled ICMP redirects to prevent **Man-In-The-Middle (MITM)** attacks:
+     ```bash
+     net.ipv4.conf.all.send_redirects = 0
+     net.ipv4.conf.default.send_redirects = 0
+     ```
+
+
